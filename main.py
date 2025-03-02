@@ -131,7 +131,7 @@ if __name__ == "__main__":
                 console.print("[bold red]INVALID ACCESS KEY[/bold red].")
                 sleep(2)
                 continue
-            else:
+            else
             console.print("[bold green]SUCCESSFUL[/bold green].")
             sleep(2)
         while True:
