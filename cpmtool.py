@@ -2,7 +2,7 @@ import requests
 
 __ENDPOINT_URL__: str = "https://cpmtool.squareweb.app/api"
 
-class CarParkTool:
+class CPMTool:
     def __init__(self, access_key) -> None:
         self.auth_token = None
         self.access_key = access_key
