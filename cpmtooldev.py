@@ -1,7 +1,7 @@
 import requests
 __ENDPOINT_URL__: str = "https://sophiashop.squareweb.app/api"
 
-class CPMSophia:
+class SophiaShop:
     def __init__(self, access_key) -> None:
         self.auth_token = None
         self.access_key = access_key
