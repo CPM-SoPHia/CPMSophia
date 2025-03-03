@@ -2,7 +2,7 @@ import requests
 
 __ENDPOINT_URL__: str = "https://cpmsophia.squareweb.app/api"
 
-class CPMSophia:
+class CPMAyan:
     def __init__(self, access_key) -> None:
         self.auth_token = None
         self.access_key = access_key
