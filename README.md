@@ -1,7 +1,7 @@
-# CarParkingTool
+# CPMSophia
 
-<h3>CarParkingTool is a tool made to modify Car Parking Multiplayer accounts with no root or vertual app.</h3>
-<h4>you just need an Access Key, wich you can get from <a href="https://t.me/CarParkingToolbot">@CarParkingToolBot</a> for free with 1K Credits Balance.</h4>
+<h3>CPMSophia is a tool made to modify Car Parking Multiplayer accounts with no root or vertual app.</h3>
+<h4>you just need an Access Key, wich you can get from <a href="https://t.me/Sophia_dev_bot">@Sophia_dev_Bot</a> for free with 1K Credits Balance.</h4>
 
 
 #### Tested on:
@@ -13,10 +13,10 @@
 ## Installation
 [don't know how to install python ?](#install-python)
 ```
-git clone https://github.com/CarParkTool/CarParkingTool.git
+git clone https://github.com/CPM-SoPHia/CPMSophia.git
 ```
 ```
-cd CarParkingTool
+cd CPMSophia
 ```
 ```
 pip install -r requirements.txt
