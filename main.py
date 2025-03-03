@@ -9,10 +9,10 @@ from rich.console import Console
 from rich.prompt import Prompt, IntPrompt
 from rich.text import Text
 from rich.style import Style
-from carparktool import CarParkTool
+from cpmsophia import CPMSophia
 
-__CHANNEL_USERNAME__ = "CarParkTool"
-__GROUP_USERNAME__   = "CarParkToolchat"
+__CHANNEL_USERNAME__ = "SophiaDevTool"
+__GROUP_USERNAME__   = "cpmggscript"
 
 def signal_handler(sig, frame):
     print("\n Bye Bye...")
@@ -37,7 +37,7 @@ def gradient_text(text, colors):
 
 def banner(console):
     os.system('cls' if os.name == 'nt' else 'clear')
-    brand_name = figlet_format('CarParkingTool', font='drpepper')
+    brand_name = figlet_format('CPMSophia', font='drpepper')
     colors = [
         "rgb(255,0,0)", "rgb(255,69,0)", "rgb(255,140,0)", "rgb(255,215,0)", "rgb(173,255,47)", 
         "rgb(0,255,0)", "rgb(0,255,255)", "rgb(0,191,255)", "rgb(0,0,255)", "rgb(139,0,255)",
@@ -45,10 +45,10 @@ def banner(console):
     ]
     colorful_text = gradient_text(brand_name, colors)
     console.print(colorful_text, end=None)
-    console.print("[bold green]♕ CarParkingTool[/bold green]: скрипт который поможет вам стать самым крутым.")
+    console.print("[bold green]♕ CPMSophia[/bold green]: Car Parking Multiplayer Tool.")
     console.print(f"[bold green]♕ Telegram[/bold green]: [bold blue]@{__CHANNEL_USERNAME__}[/bold blue] or [bold blue]@{__GROUP_USERNAME__}[/bold blue].")
     console.print("[bold red]==================================================[/bold red]")
-    console.print("[bold yellow]! Note[/bold yellow]: Вам нужно выйти с игры перед использованием !.", end="\n\n")
+    console.print("[bold yellow]! Note[/bold yellow]: Logout From CPM Before Using This Tool !.", end="\n\n")
 
 def load_player_data(cpm):
     response = cpm.get_player_data()
@@ -116,7 +116,7 @@ if __name__ == "__main__":
         acc_password = prompt_valid_value("[bold][?] Account Password[/bold]", "Password", password=False)
         acc_access_key = prompt_valid_value("[bold][?] Access Key[/bold]", "Access Key", password=False)
         console.print("[bold cyan][%] Trying to Login[/bold cyan]: ", end=None)
-        cpm = CarParkTool(acc_access_key)
+        cpm = CPMSophia(acc_access_key)
         login_response = cpm.login(acc_email, acc_password)
         if login_response != 0:
             if login_response == 100:
