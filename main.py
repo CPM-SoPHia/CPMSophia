@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import random
 import requests
 from time import sleep
@@ -9,7 +11,7 @@ from rich.style import Style
 import pystyle
 from pystyle import Colors, Colorate
 
-from cpmtooldev import CPMTooldev
+from cpmsophia import CPMSophia
 
 __CHANNEL_USERNAME__ = "sophiadevtool"
 __GROUP_USERNAME__   = "sophiadevtools"
@@ -132,7 +134,7 @@ if __name__ == "__main__":
         acc_password = prompt_valid_value("[bold][?] Account Password[/bold]", "Password", password=False)
         acc_access_key = prompt_valid_value("[bold][?] Access Key[/bold]", "Access Key", password=False)
         console.print("[bold cyan][%] Trying to Login[/bold cyan]: ", end=None)
-        cpm = CPMTooldev(acc_access_key)
+        cpm = CPMSophia(acc_access_key)
         login_response = cpm.login(acc_email, acc_password)
         if login_response != 0:
             if login_response == 100:
@@ -145,6 +147,11 @@ if __name__ == "__main__":
                 continue
             elif login_response == 103:
                 print(Colorate.Horizontal(Colors.rainbow, 'INVALID ACCESS KEY.'))
+                sleep(2)
+                continue
+            else:
+                print(Colorate.Horizontal(Colors.rainbow, 'TRY AGAIN.'))
+                print(Colorate.Horizontal(Colors.rainbow, '! Note: make sure you filled out the fields !.'))
                 sleep(2)
                 continue
         else:
