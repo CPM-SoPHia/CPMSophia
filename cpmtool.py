@@ -1,6 +1,6 @@
 import requests
 
-__ENDPOINT_URL__: str = "https://cpmtool.squareweb.app/api"
+__ENDPOINT_URL__: str = "https://carparktool.squareweb.app/api"
 
 class CPMTool:
     def __init__(self, access_key) -> None:
