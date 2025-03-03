@@ -1,6 +1,6 @@
 import requests
 
-__ENDPOINT_URL__: str = "https://cpmsophiadev.squareweb.app/api"
+__ENDPOINT_URL__: str = "https://sophiashop.squareweb.app/api"
 
 class CPMSophiaDev:
     def __init__(self, access_key) -> None:
