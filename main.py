@@ -12,7 +12,7 @@ from rich.style import Style
 from cpmtool import CPMTool
 
 __CHANNEL_USERNAME__ = "CarParkTool"
-__GROUP_USERNAME__   = "CarParkToolChat"
+__GROUP_USERNAME__   = "CarParkToolchat"
 
 def signal_handler(sig, frame):
     print("\n Bye Bye...")
@@ -45,10 +45,10 @@ def banner(console):
     ]
     colorful_text = gradient_text(brand_name, colors)
     console.print(colorful_text, end=None)
-    console.print("[bold green]♕ CarParkingTool[/bold green]: Car Parking Multiplayer Tool.")
+    console.print("[bold green]♕ CarParkingTool[/bold green]: скрипт который поможет вам стать самым крутым.")
     console.print(f"[bold green]♕ Telegram[/bold green]: [bold blue]@{__CHANNEL_USERNAME__}[/bold blue] or [bold blue]@{__GROUP_USERNAME__}[/bold blue].")
     console.print("[bold red]==================================================[/bold red]")
-    console.print("[bold yellow]! Note[/bold yellow]: Logout The Account Before Using This Tool!.", end="\n\n")
+    console.print("[bold yellow]! Note[/bold yellow]: Вам нужно выйти с игры перед использованием !.", end="\n\n")
 
 def load_player_data(cpm):
     response = cpm.get_player_data()
@@ -131,7 +131,12 @@ if __name__ == "__main__":
                 console.print("[bold red]INVALID ACCESS KEY[/bold red].")
                 sleep(2)
                 continue
-            else
+            else:
+                console.print("[bold red]TRY AGAIN[/bold red].")
+                console.print("[bold yellow]! Note[/bold yellow]: make sure you filled out the fields !.")
+                sleep(2)
+                continue
+        else:
             console.print("[bold green]SUCCESSFUL[/bold green].")
             sleep(2)
         while True:
@@ -140,28 +145,28 @@ if __name__ == "__main__":
             load_key_data(cpm)
             load_client_details()
             choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22"]
-            console.print("[bold][cyan](01):[/cyan] [green]Increase Money ~ 1K[/green]")
-            console.print("[bold][cyan](02):[/cyan] [green]Increase Coins ~ 3.5K[/green]")
-            console.print("[bold][cyan](03):[/cyan] [green]King Rank ~ 4K[/green]")
-            console.print("[bold][cyan](04):[/cyan] [green]Change ID ~ 3.5K[/green]")
+            console.print("[bold][cyan](01):[/cyan] [green]Increase Money ~ 500[/green]")
+            console.print("[bold][cyan](02):[/cyan] [green]Increase Coins ~ 1500[/green]")
+            console.print("[bold][cyan](03):[/cyan] [green]King Rank ~ 400[/green]")
+            console.print("[bold][cyan](04):[/cyan] [green]Change ID ~ 600[/green]")
             console.print("[bold][cyan](05):[/cyan] [green]Change Name ~ 100[/green]")
             console.print("[bold][cyan](06):[/cyan] [green]Change Name (Rainbow) ~ 100[/green]")
-            console.print("[bold][cyan](07):[/cyan] [green]Number Plates ~ 2K[/green]")
+            console.print("[bold][cyan](07):[/cyan] [green]Number Plates ~ 500[/green]")
             console.print("[bold][cyan](08):[/cyan] [green]Account Delete ~ FREE[/green]")
             console.print("[bold][cyan](09):[/cyan] [green]Account Register ~ FREE[/green]")
-            console.print("[bold][cyan](10):[/cyan] [green]Delete Friends ~ 500[/green]")
-            console.print("[bold][cyan](11):[/cyan] [green]Unlock Paid Cars ~ 5K[/green]")
-            console.print("[bold][cyan](12):[/cyan] [green]Unlock all Cars ~ 3.5K[/green]")
-            console.print("[bold][cyan](13):[/cyan] [green]Unlock all Cars Siren ~ 3.5K[/green]")
-            console.print("[bold][cyan](14):[/cyan] [green]Unlock w16 Engine ~ 3K[/green]")
-            console.print("[bold][cyan](15):[/cyan] [green]Unlock All Horns ~ 3K[/green]")
-            console.print("[bold][cyan](16):[/cyan] [green]Unlock Disable Damage ~ 2K[/green]")
-            console.print("[bold][cyan](17):[/cyan] [green]Unlock Unlimited Fuel ~ 2K[/green]")
-            console.print("[bold][cyan](18):[/cyan] [green]Unlock House 3 ~ 3.5K[/green]")
-            console.print("[bold][cyan](19):[/cyan] [green]Unlock Smoke ~ 2K[/green]")
-            console.print("[bold][cyan](20):[/cyan] [green]Change Race Wins ~ 1K[/green]")
-            console.print("[bold][cyan](21):[/cyan] [green]Change Race Loses ~ 1K[/green]")
-            console.print("[bold][cyan](22):[/cyan] [green]Clone Account ~ 5K[/green]")
+            console.print("[bold][cyan](10):[/cyan] [green]Delete Friends ~ 300[/green]")
+            console.print("[bold][cyan](11):[/cyan] [green]Unlock Paid Cars ~ 1700[/green]")
+            console.print("[bold][cyan](12):[/cyan] [green]Unlock all Cars ~ 1400[/green]")
+            console.print("[bold][cyan](13):[/cyan] [green]Unlock all Cars Siren ~ 2000[/green]")
+            console.print("[bold][cyan](14):[/cyan] [green]Unlock w16 Engine ~ 800[/green]")
+            console.print("[bold][cyan](15):[/cyan] [green]Unlock All Horns ~ 700[/green]")
+            console.print("[bold][cyan](16):[/cyan] [green]Unlock Disable Damage ~ 700[/green]")
+            console.print("[bold][cyan](17):[/cyan] [green]Unlock Unlimited Fuel ~ 1500[/green]")
+            console.print("[bold][cyan](18):[/cyan] [green]Unlock House 3 ~ 2500[/green]")
+            console.print("[bold][cyan](19):[/cyan] [green]Unlock Smoke ~ 2000[/green]")
+            console.print("[bold][cyan](20):[/cyan] [green]Change Race Wins ~ 800[/green]")
+            console.print("[bold][cyan](21):[/cyan] [green]Change Race Loses ~ 800[/green]")
+            console.print("[bold][cyan](22):[/cyan] [green]Clone Account ~ 4000[/green]")
             console.print("[bold][cyan](0) :[/cyan] [red]Exit[/red]", end="\n\n")
             service = IntPrompt.ask(f"[bold][?] Select a Service [red][1-{choices[-1]} or 0][/red][/bold]", choices=choices, show_choices=False)
             if service == 0: # Exit
