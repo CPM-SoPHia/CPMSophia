@@ -1,5 +1,3 @@
-#!/usr/bin/python
-
 import random
 import requests
 from time import sleep
@@ -10,7 +8,8 @@ from rich.text import Text
 from rich.style import Style
 import pystyle
 from pystyle import Colors, Colorate
-from cpmsophiadev import CPMSophiaDev
+
+from cpmtooldev import CPMTooldev
 
 __CHANNEL_USERNAME__ = "sophiadevtool"
 __GROUP_USERNAME__   = "sophiadevtools"
@@ -38,9 +37,11 @@ def gradient_text(text, colors):
 
 def banner(console):
     os.system('cls' if os.name == 'nt' else 'clear')
-    brand_name =  "Car Parking Multiplayer 1 Tool - @SophiaModz"
+    brand_name =  "Car Parking Multiplayer 1 Tool - t.me/SophiaModz"
     colors = [
         "rgb(255,0,0)", "rgb(255,69,0)", "rgb(255,140,0)", "rgb(255,215,0)", "rgb(173,255,47)", 
+        "rgb(0,255,0)", "rgb(0,255,255)", "rgb(0,191,255)", "rgb(0,0,255)", "rgb(139,0,255)",
+        "rgb(255,0,255)"
     ]
     colorful_text = gradient_text(brand_name, colors)
     console.print(colorful_text)
@@ -131,7 +132,7 @@ if __name__ == "__main__":
         acc_password = prompt_valid_value("[bold][?] Account Password[/bold]", "Password", password=False)
         acc_access_key = prompt_valid_value("[bold][?] Access Key[/bold]", "Access Key", password=False)
         console.print("[bold cyan][%] Trying to Login[/bold cyan]: ", end=None)
-        cpm = CPMSophiaDev(acc_access_key)
+        cpm = CPMTooldev(acc_access_key)
         login_response = cpm.login(acc_email, acc_password)
         if login_response != 0:
             if login_response == 100:
@@ -600,9 +601,9 @@ if __name__ == "__main__":
                     answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
                     if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Thank You for using our tool, please join our telegram channe: @{__CHANNEL_USERNAME__}.'))
                     else: continue
-                        
+                else:     
                     print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
-                    print(Colorate.Horizontal(Colors.rainbow, '[!] Please use valid values.'))
+                    print(Colorate.Horizontal(Colors.rainbow, '[!] THAT RECIEVER ACCOUNT IS GMAIL PASSWORD IS NOT VALID OR THAT ACCOUNT IS NOT REGISTERED.'))
                     sleep(2)
                     continue
             elif service == 27:
@@ -640,3 +641,7 @@ if __name__ == "__main__":
             else: continue
             break
         break
+            
+        
+            
+              
